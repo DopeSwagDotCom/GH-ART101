@@ -1,0 +1,17 @@
+
+
+.test-div{
+background: rgb(255,180,200);
+color: rgb(255,20,80);
+font-family:Helvetica;
+padding: 20px;
+margin: 10px;
+display:block ;
+border-radius: 20px;
+}
+div.test-div h2{
+    color: black;
+}
+div.test-div:hover{
+    background: rgb(255,220,240)
+}

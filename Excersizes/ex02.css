@@ -1,0 +1,12 @@
+h1{color :rgb(142, 49, 114); 
+    font-family: Arial, Helvetica, sans-serif; 
+    align-items: center;
+} 
+
+html {background-color: rgb(250, 160, 223)}
+.swag {background-color: rgb(253, 220, 255); 
+    color: rgb(142, 49, 114);
+    display: block; width: 310px;
+    padding: 20px 50px 20px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
