@@ -2,3 +2,10 @@ body{background-color: rgb(178, 111, 255) ; font-family: Arial, Helvetica, sans-
 h1,h2{color: white; padding: 25px}
 p,ul,ol{padding: 20px; background-color:  rgb(216, 255, 205); color: rgb(178, 111, 255);} 
 #mypic {width: 300px;}
+#introduction p {
+    font-style:oblique;
+}
+#introduction h1,#introduction h2 {
+font-style: italic;
+
+}
