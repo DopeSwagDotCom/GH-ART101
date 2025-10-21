@@ -1,23 +1,43 @@
 //Create button
 //Create a numerical variable "clicks" set at a value of 0. 
 let numberclicks = 0; 
-
+let colors = ["Lime", "Turquoise", "Hotpink", "PaleGreen", "Plum", "Greenyellow", "LightSalmon" ];
 let sentencestart = "you... You CLICKED me... ";
 let sentencetail = " TIMES!!! I think im gonna be SICK!!!!"; 
+
 
 $("#MySwagButton").click( function() {
 numberclicks = numberclicks + 1;
 
+let reminder= numberclicks % colors.length; 
 let fullsentence = sentencestart + numberclicks + sentencetail; 
 
-$("#MySwagButton").html(fullsentence)
+$("#MySwagButton").html(fullsentence);
+
+$("body").css("background-color", colors[reminder]);
 
 }); 
 
-$(#imsorry).click( function() {
-let apologysent = "Kick Rocks!!!"
-$("#imsorry").html(apologysent)
-});
+$("#ImSorry").click( function() { 
+    let apologysent = "I dont buy it!"
+    if (numberclicks >= 1 && numberclicks < 50 ) {
+    apologysent = "Did you actually just do that dude... like are you serious??";        
+    } else if (numberclicks >=50 && numberclicks < 100) {
+        apologysent = "Im actually gonna kick your ass im not even kidding"
+    }
+    else if (numberclicks >= 100 && numberclicks < 500){
+        apologysent = "just stop..."
+
+    } else if (numberclicks >= 500) {
+        apologysent = "dude..."
+
+    }
+    else {
+        apologysent = "Dude What? seriously dont im not even kidding";
+    }
+$("#ImSorry").html(apologysent);
+$("AllFiller").html(apologysent);
+    } );
 
 //When the button is clicked, add one (1) to the "clicks" variable
     //If clicks = "0", return "Try click me" on the face of the button
