@@ -9,3 +9,11 @@ p,ul,ol{padding: 20px; background-color:  rgb(216, 255, 205); color: rgb(178, 11
 font-style: italic;
 
 }
+.lists {
+    display: flex;
+gap: 10px;
+}
+.yesbro {
+color: black;
+
+}
