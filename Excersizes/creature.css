@@ -20,3 +20,17 @@ font-family: Arial, Helvetica, sans-serif;
 background-color: #dbffdf;
 
 }
+.creature DIV{
+margin: 10px;
+
+}
+.creature-body {
+    background: pink;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+.eye { height: 18px; width: 10px; border: 2px solid #000; border-radius: 10px; background: #fff;}

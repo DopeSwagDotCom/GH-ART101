@@ -4,13 +4,23 @@ let numberclicks = 0;
 let colors = ["Lime", "Turquoise", "Hotpink", "PaleGreen", "Plum", "Greenyellow", "LightSalmon" ];
 let sentencestart = "you... You CLICKED me... ";
 let sentencetail = " TIMES!!! I think im gonna be SICK!!!!"; 
+let reminder= ""
+let fullsentence = ""
+ let apologysent = "I dont buy it!"
 
-
+ let sentencebank = [
+    
+"Dude What? seriously dont im not even kidding",
+"Did you actually just do that dude... like are you serious??",
+"Im actually gonna kick your ass im not even kidding",
+"just stop...",
+"dude...",
+]
 $("#MySwagButton").click( function() {
 numberclicks = numberclicks + 1;
 
-let reminder= numberclicks % colors.length; 
-let fullsentence = sentencestart + numberclicks + sentencetail; 
+reminder= numberclicks % colors.length; 
+fullsentence = sentencestart + numberclicks + sentencetail; 
 
 $("#MySwagButton").html(fullsentence);
 
@@ -19,21 +29,21 @@ $("body").css("background-color", colors[reminder]);
 }); 
 
 $("#ImSorry").click( function() { 
-    let apologysent = "I dont buy it!"
+
     if (numberclicks >= 1 && numberclicks < 50 ) {
-    apologysent = "Did you actually just do that dude... like are you serious??";        
+    apologysent = sentencebank[1];        
     } else if (numberclicks >=50 && numberclicks < 100) {
-        apologysent = "Im actually gonna kick your ass im not even kidding"
+        apologysent = sentencebank[2]
     }
     else if (numberclicks >= 100 && numberclicks < 500){
-        apologysent = "just stop..."
+        apologysent = sentencebank[3]
 
     } else if (numberclicks >= 500) {
-        apologysent = "dude..."
+        apologysent = sentencebank[4]
 
     }
     else {
-        apologysent = "Dude What? seriously dont im not even kidding";
+        apologysent = sentencebank[0]
     }
 $("#ImSorry").html(apologysent);
 $("AllFiller").html(apologysent);

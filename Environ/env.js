@@ -1,4 +1,3 @@
-let creaturenames = ["creature 1", "creature 2", "creature 3"]
 
 let creatureattributes = {
 disposition : ["erratic", "apathetic", "dispondent", "elated", "nuerotic", "emo...",],
@@ -7,19 +6,19 @@ height : ["3 apples tall", "4 apples tall", "5 apples tall", "6-7 apples tall"],
 risk: ["true", "false"],
 
 }
-let creatureOneBio;
-let creatureTwoBio;
+let creatureBioOne;
+let creatureBioTwo;
 
 
 
 //LIGHT SWITCH
 let lighton = false;
-let backgroundcolor = ["Black", "White"];
+let PageBackgroundColor = ["Black", "White"];
 $("#lightswitchbutton").click (function () {
 
     if (lighton == false) {
         //Change Css background color
-       $("body").css("background-color", backgroundcolor[1]);
+       $("body").css("background-color", PageBackgroundColor[1]);
        $("#lightswitchbutton").css("background-color", "rgba(0, 243, 0, 0.951)");
        $("#lightswitchbutton").css("color", "Black");
        $("#lightswitchbutton").animate({right: '150px'});
@@ -31,7 +30,7 @@ $("#lightswitchbutton").click (function () {
 
     else if (lighton == true) {
         //change Css Background color
-        $("body").css("background-color", backgroundcolor[0]);
+        $("body").css("background-color", PageBackgroundColor[0]);
         $("#lightswitchbutton").css("background-color", "rgba(243, 0, 0, 0.95)");
         $("#lightswitchbutton").css("color", "White");
         $("#lightswitchbutton").animate({left: '150px'});
@@ -44,23 +43,23 @@ $("#lightswitchbutton").click (function () {
 // CREATURE BIOS
 
 
-creatureOneBio =
+creatureBioOne =
 "color:  " + creatureattributes.color[0] + 
 "</br> disposition:  " + creatureattributes.disposition[2] +
 "</br> height:  " + creatureattributes.height[0] +
 "</br> Risk to self or others:  " + creatureattributes.risk[0];
 
-creatureTwoBio =
+creatureBioTwo =
 "color:  " + creatureattributes.color[0] + 
 "</br> disposition:  " + creatureattributes.disposition[5] +
 "</br> height:  " + creatureattributes.height[3] +
 "</br> Risk to self or others:  " + creatureattributes.risk[1];
 
 
-$("#creatureoneattr").html(creatureOneBio);
+$("#creatureoneattr").html(creatureBioOne);
 $("#creatureoneattr").hide();
 let displayone = false
-$("#creaturetwoattr").html(creatureTwoBio);
+$("#creaturetwoattr").html(creatureBioTwo);
 $("#creaturetwoattr").hide();
 let displaytwo = false
 
