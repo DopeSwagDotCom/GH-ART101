@@ -3,11 +3,18 @@ let creatureattributes = {
 disposition : ["erratic", "apathetic", "dispondent", "elated", "nuerotic", "emo...",],
 color : ["green", "not green"],
 height : ["3 apples tall", "4 apples tall", "5 apples tall", "6-7 apples tall"],
-risk: ["true", "false"],
-
+risk: ["true", "false"],    
 }
 let creatureBioOne;
 let creatureBioTwo;
+let displaysecret = ["Pretty interesting stuff, Right?",
+     "Quiet Don't tell anyone... Its a Secret!", 
+     "Ok, now this is a super big secret, dont rat homeboy",
+     "Are you seriously still doing this, its not interesting",
+     "I wont budge",
+     "Ok you got me, this one is super duper secret though and thats final"
+]
+let displaysecretcount = 0
 
 
 
@@ -88,4 +95,28 @@ $("#displaycreature2").html("Display Information");
 displaytwo = false
 }
 });
+
+$("#secret").dblclick( function(){
+displaysecretcount = displaysecretcount + 1
+
+if (displaysecretcount == 1) {
+$("#secret").html(displaysecret[1])
+}
+if (displaysecretcount == 2) {
+$("#secret").html(displaysecret[2])
+}
+if (displaysecretcount == 3) {
+$("#secret").html(displaysecret[3])
+}
+if (displaysecretcount == 4) {
+$("#secret").html(displaysecret[4])
+}
+if (displaysecretcount > 7) {
+$("#secret").html(displaysecret[5])
+if (displaysecretcount > 8) {
+    displaysecretcount = 0
+    $("#secret").html(displaysecret[0])
+}
+}}
+)
 

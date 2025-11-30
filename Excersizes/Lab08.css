@@ -1,0 +1,7 @@
+#creature {
+  width: 150px;
+  height: 150px;
+  background: rgb(50, 255, 159);
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
